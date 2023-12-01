@@ -1,4 +1,4 @@
-from helpers import read_file
+from src.utils.helpers import read_file
 
 input = read_file("day1")
 
@@ -46,7 +46,6 @@ def get_start_and_end_number(input, use_string_numbers):
         for num in num_dict.values():
             found_nums[num] = line.find(num)
             found_nums_reverse[num] = line[::-1].find(num)
-
         total += int(get_value_from_line(found_nums) + get_value_from_line(found_nums_reverse))
 
     return total

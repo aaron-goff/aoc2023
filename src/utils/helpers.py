@@ -5,7 +5,7 @@ def read_file(fname):
         fname += '.txt'
     path = os.path.realpath(__file__)
     dir = os.path.dirname(path)
-    dir = dir.replace('days', 'resources')
+    dir = dir.replace('utils', 'resources')
     os.chdir(dir)
     file = open(fname)
     content = file.readlines()
